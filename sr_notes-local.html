@@ -523,7 +523,7 @@ letter color: #f0f0f0
       const outputField = document.querySelector("#output-field");
       let findings = document.querySelector("#frs-findings-field").value;
       const formattedFindings = formatText(findings);
-      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#frs-next-steps-field").value}`;
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of our session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#frs-next-steps-field").value}`;
       outputField.value = outputString;
     }
 
@@ -532,7 +532,7 @@ letter color: #f0f0f0
       const outputField = document.querySelector("#output-field");
       let findings = document.querySelector("#fo-findings-field").value;
       const formattedFindings = formatText(findings);
-      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#fo-next-steps-field").value}`;
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of our session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#fo-next-steps-field").value}`;
       outputField.value = outputString;
     }
 
