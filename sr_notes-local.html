@@ -340,11 +340,6 @@ letter color: #f0f0f0
             <label>Business Impact</label>
             <input id="frs-business-impact-field" class="frs" type="text" required>
           </div>
-          <div class="field-container">
-            <label>Environment & Version</label>
-            <textarea id="frs-environment-field" class="inline-ta frs" rows="2" required></textarea>
-          </div>
-        </div>
 
         <div class="sub2">
           <div class="field-container textarea-container">
@@ -358,10 +353,6 @@ letter color: #f0f0f0
         </div>
         <div class="sub3">
 
-          <div class="field-container">
-            <label>Files & Location</label>
-            <input id="frs-files-location-field" class="frs" type="text" required>
-          </div>
           <div class="field-container">
             <label>Next Steps</label>
             <textarea id="frs-next-steps-field" class="inline-ta frs" required></textarea>
@@ -399,10 +390,6 @@ letter color: #f0f0f0
         </div>
 
         <div class="sub3">
-          <div class="field-container">
-            <label>Files & Location</label>
-            <input id="fo-files-location-field" class="fo" type="text" required>
-          </div>
           <div class="field-container">
             <label>Next Steps</label>
             <textarea id="fo-next-steps-field" class="inline-ta fo" required></textarea>
@@ -448,10 +435,6 @@ letter color: #f0f0f0
         </div>
 
         <div class="sub3">
-          <div class="field-container">
-            <label>Files & Location</label>
-            <input id="files-location-field" class="esc" type="text" required>
-          </div>
           <div class="field-container">
             <label>Lab Replication</label>
             <textarea id="lab-replication-field" class="inline-ta esc" rows="2" required></textarea>
@@ -527,7 +510,7 @@ letter color: #f0f0f0
       const outputField = document.querySelector("#output-field");
       let findings = document.querySelector("#frs-findings-field").value;
       const formattedFindings = formatText(findings);
-      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#frs-next-steps-field").value}`;
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#frs-next-steps-field").value}\n\nVery Best,`;
       outputField.value = outputString;
     }
 
@@ -536,7 +519,7 @@ letter color: #f0f0f0
       const outputField = document.querySelector("#output-field");
       let findings = document.querySelector("#fo-findings-field").value;
       const formattedFindings = formatText(findings);
-      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#fo-next-steps-field").value}`;
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on call today. Below is a summary of that session as well as the next steps for this case. Thank you again for your time and for choosing Velo as your IT partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#fo-next-steps-field").value}\n\nVery Best,`;
       outputField.value = outputString;
     }
 
@@ -604,9 +587,6 @@ ${formattedIssueSummary}
 𝗙𝗜𝗡𝗗𝗜𝗡𝗚𝗦
 ‾‾‾‾‾‾‾‾‾‾‾
 ${formattedFindings}
-𝗙𝗜𝗟𝗘𝗦 & 𝗟𝗢𝗖𝗔𝗧𝗜𝗢𝗡
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-${document.querySelector("#frs-files-location-field").value}
 
 𝗡𝗘𝗫𝗧 𝗦𝗧𝗘𝗣𝗦
 ‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -643,9 +623,6 @@ ${formattedIssueSummary}
 𝗙𝗜𝗡𝗗𝗜𝗡𝗚𝗦
 ‾‾‾‾‾‾‾‾‾‾‾
 ${formattedFindings}
-𝗙𝗜𝗟𝗘𝗦 & 𝗟𝗢𝗖𝗔𝗧𝗜𝗢𝗡
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-${document.querySelector("#fo-files-location-field").value}
 
 𝗡𝗘𝗫𝗧 𝗦𝗧𝗘𝗣𝗦
 ‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -686,9 +663,6 @@ ${formattedIssueSummary}
 𝗙𝗜𝗡𝗗𝗜𝗡𝗚𝗦
 ‾‾‾‾‾‾‾‾‾‾‾
 ${formattedFindings}
-𝗙𝗜𝗟𝗘𝗦 & 𝗟𝗢𝗖𝗔𝗧𝗜𝗢𝗡
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-${document.querySelector("#files-location-field").value}
 
 𝗟𝗔𝗕 𝗥𝗘𝗣𝗟𝗜𝗖𝗔𝗧𝗜𝗢𝗡
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
